@@ -7,8 +7,14 @@ Yipeng Hu, Eli Gibson, Li-Lin Lee, Weidi Xie, Dean C. Barratt, Tom Vercauteren, 
 
 ## Downloading model zoo file and conditioning data
 
-The network weights and examples data can be downloaded with the command
-`net_download ultrasound_simulator_gan_model_zoo ultrasound_simulator_gan_model_zoo_data`. Replace `net_download` with `python net_download.py` if you cloned the NiftyNet repository. 
+If you cloned the NiftyNet repository, the network weights and examples data can be downloaded with the command
+`python net_download.py ultrasound_simulator_gan_model_zoo ultrasound_simulator_gan_model_zoo_data`. 
+
+If you install NiftyNet via pip, you won't have the net_download feature yet. You can download the 
+[model zoo entry](https://www.dropbox.com/s/yddopkblhe7gfsj/dense_vnet_abdominal_ct_model_zoo.tar.gz?dl=1) 
+and the [example data](https://www.dropbox.com/s/5fk0m9v12if5da9/dense_vnet_abdominal_ct_model_zoo_data.tar.gz?dl=1) manually. 
+Unzip ultrasound_simulator_gan_model_zoo.tar.gz into ~/niftynet/models/ultrasound_simulator_gan_model_zoo/ and ultrasound_simulator_gan_model_zoo_data.tar.gz into 
+~/niftynet/data/ultrasound_simulator_gan_model_zoo_data/.
 
 Make sure that the model directory (`~/niftynet/models/` by default) is on the PYTHONPATH.
 
