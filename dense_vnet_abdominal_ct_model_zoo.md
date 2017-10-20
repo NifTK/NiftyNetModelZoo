@@ -13,8 +13,14 @@ nearby organs (liver, gallbladder, spleen, left kidney).
 
 ## Downloading model zoo files
 
-The network weights and examples data can be downloaded with the command
-`net_download dense_vnet_abdominal_ct_model_zoo dense_vnet_abdominal_ct_model_zoo_data`. Replace `net_download` with `python net_download.py` if you cloned the NiftyNet repository. 
+If you cloned the NiftyNet repository, the network weights and examples data can be downloaded with the command
+`python net_download.py dense_vnet_abdominal_ct_model_zoo dense_vnet_abdominal_ct_model_zoo_data`. 
+
+If you install NiftyNet via pip, you won't have the net_download feature yet. You can download the 
+[model zoo entry](https://www.dropbox.com/s/yddopkblhe7gfsj/dense_vnet_abdominal_ct_model_zoo.tar.gz?dl=1) 
+and the [example data](https://www.dropbox.com/s/5fk0m9v12if5da9/dense_vnet_abdominal_ct_model_zoo_data.tar.gz?dl=1) manually. 
+Unzip dense_vnet_abdominal_ct_model_zoo.tar.gz into ~/niftynet/models/dense_vnet_abdominal_ct_model_zoo/ and dense_vnet_abdominal_ct_model_zoo_data.tar.gz into 
+~/niftynet/data/dense_vnet_abdominal_ct_model_zoo_data/.
 
 Make sure that the model directory (`~/niftynet/models/` by default) is on the PYTHONPATH.
 
