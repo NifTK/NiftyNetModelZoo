@@ -33,7 +33,7 @@ Make sure that the model directory (`~/niftynet/models/` by default) is on the `
 
 Generate segmentations for the included example image with the command 
 ```bash
-net_segment inference -c ~/niftynet/niftynetext/dense_vnet_abdominal_ct_model_zoo/config.ini
+net_segment inference -c ~/niftynet/extensions/dense_vnet_abdominal_ct_model_zoo/config.ini
 ```
 Replace `net_segment` with `python net_segment.py` if you cloned the NiftyNet repository. 
 
