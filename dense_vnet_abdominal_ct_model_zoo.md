@@ -33,7 +33,7 @@ Make sure that the model directory (`~/niftynet/models/` by default) is on the `
 
 Generate segmentations for the included example image with the command 
 ```bash
-net_segment inference -c ~/niftynet/extensions/dense_vnet_abdominal_ct_model_zoo/config.ini
+net_segment inference -c ~/niftynet/extensions/dense_vnet_abdominal_ct/config.ini
 ```
 Replace `net_segment` with `python net_segment.py` if you cloned the NiftyNet repository. 
 
@@ -49,7 +49,7 @@ field-of-view set to -1000.
 
 ### Editing the configuration file
 
-Make a copy of the configuration file `~/niftynet/models/dense_vnet_abdominal_ct_model_zoo/config.ini` to a location of your choice.
+Make a copy of the configuration file `~/niftynet/extensions/dense_vnet_abdominal_ct/config.ini` to a location of your choice.
 You may need to change the `path_to_search` and `filename_contains` lines in the configuration file to point to the correct paths for your images. You can also change the `save_seg_dir` setting to change where the segmentations are saved.
 
 ### Generating segmentations

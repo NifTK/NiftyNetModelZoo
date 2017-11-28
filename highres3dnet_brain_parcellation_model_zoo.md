@@ -23,3 +23,7 @@ Generate segmentations for the included example image with the command
 ```bash
 net_segment inference -c ~/niftynet/extensions/highres3dnet_brain_parcellation/highres3dnet_config_eval.ini
 ```
+
+Replace `net_segment` with `python net_segment.py` if you cloned the NiftyNet repository. 
+
+Replace `~/niftynet/` if you specified a custom download path in the `net_download` command.
