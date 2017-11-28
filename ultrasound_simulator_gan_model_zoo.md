@@ -8,7 +8,9 @@ Yipeng Hu, Eli Gibson, Li-Lin Lee, Weidi Xie, Dean C. Barratt, Tom Vercauteren, 
 ## Downloading model zoo file and conditioning data
 
 If you cloned the NiftyNet repository, the network weights and examples data can be downloaded with the command
-`python net_download.py ultrasound_simulator_gan_model_zoo ultrasound_simulator_gan_model_zoo_data`. 
+```bash
+python net_download.py ultrasound_simulator_gan_model_zoo
+``` 
 
 If you install NiftyNet via pip, you won't have the net_download feature yet. You can download the 
 [model zoo entry](https://www.dropbox.com/s/yddopkblhe7gfsj/dense_vnet_abdominal_ct_model_zoo.tar.gz?dl=1) 
@@ -22,13 +24,20 @@ This network generates ultrasound images conditioned by a coordinate map. Some e
 
 ## Generating segmentations for example data
 
-Generate segmentations for the included example conditioning data with the command `net_gan inference -c ~/niftynet/models/ultrasound_simulator_gan_model_zoo/config.ini`. Replace `net_segment` with `python net_gan.py` if you cloned the NiftyNet repository. Replace `~/niftynet/` if you specified a custom download path in the `net_download` command.
+Generate segmentations for the included example conditioning data with the command 
+```bash
+net_gan inference -c ~/niftynet/extensions/ultrasound_simulator_gan/config.ini
+```
+
+Replace `net_segment` with `python net_gan.py` if you cloned the NiftyNet repository. 
+
+Replace `~/niftynet/` if you specified a custom download path in the `net_download` command.
 
 ## Generating segmentations for additional conditioning data
 
 ## Editing the configuration file
 
-Make a copy of the configuration file `~/niftynet/models/ultrasound_simulator_gan_model_zoo/config.ini` to a location of your choice.
+Make a copy of the configuration file `~/niftynet/extensions/ultrasound_simulator_gan/config.ini` to a location of your choice.
 You may need to change the `path_to_search` and `filename_contains` lines in the configuration file to point to the correct paths for your conditioning data. You can also change the `save_seg_dir` setting to change where the segmentations are saved.
 
 ## Generating samples

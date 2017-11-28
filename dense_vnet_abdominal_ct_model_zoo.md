@@ -14,19 +14,30 @@ nearby organs (liver, gallbladder, spleen, left kidney).
 ## Downloading model zoo files
 
 If you cloned the NiftyNet repository, the network weights and examples data can be downloaded with the command
-`python net_download.py dense_vnet_abdominal_ct_model_zoo dense_vnet_abdominal_ct_model_zoo_data`. 
+```bash
+python net_download.py dense_vnet_abdominal_ct_model_zoo
+```
 
-If you install NiftyNet via pip, you won't have the net_download feature yet. You can download the 
+
+Alternatively, you can download the 
 [model zoo entry](https://www.dropbox.com/s/yddopkblhe7gfsj/dense_vnet_abdominal_ct_model_zoo.tar.gz?dl=1) 
 and the [example data](https://www.dropbox.com/s/5fk0m9v12if5da9/dense_vnet_abdominal_ct_model_zoo_data.tar.gz?dl=1) manually. 
-Unzip dense_vnet_abdominal_ct_model_zoo.tar.gz into ~/niftynet/models/dense_vnet_abdominal_ct_model_zoo/ and dense_vnet_abdominal_ct_model_zoo_data.tar.gz into 
-~/niftynet/data/dense_vnet_abdominal_ct_model_zoo_data/.
+Unzip `dense_vnet_abdominal_ct_model_zoo.tar.gz` into 
+`~/niftynet/models/dense_vnet_abdominal_ct_model_zoo/` and 
+`dense_vnet_abdominal_ct_model_zoo_data.tar.gz` into 
+`~/niftynet/data/dense_vnet_abdominal_ct_model_zoo_data/`.
 
-Make sure that the model directory (`~/niftynet/models/` by default) is on the PYTHONPATH.
+Make sure that the model directory (`~/niftynet/models/` by default) is on the `PYTHONPATH`.
 
 ## Generating segmentations for example data
 
-Generate segmentations for the included example image with the command `net_segment inference -c ~/niftynet/models/dense_vnet_abdominal_ct_model_zoo/config.ini`. Replace `net_segment` with `python net_segment.py` if you cloned the NiftyNet repository. Replace `~/niftynet/` if you specified a custom download path in the `net_download` command.
+Generate segmentations for the included example image with the command 
+```bash
+net_segment inference -c ~/niftynet/extensions/dense_vnet_abdominal_ct/config.ini
+```
+Replace `net_segment` with `python net_segment.py` if you cloned the NiftyNet repository. 
+
+Replace `~/niftynet/` if you specified a custom download path in the `net_download` command.
 
 ## Generating segmentations for your own data
 
@@ -38,7 +49,7 @@ field-of-view set to -1000.
 
 ### Editing the configuration file
 
-Make a copy of the configuration file `~/niftynet/models/dense_vnet_abdominal_ct_model_zoo/config.ini` to a location of your choice.
+Make a copy of the configuration file `~/niftynet/extensions/dense_vnet_abdominal_ct/config.ini` to a location of your choice.
 You may need to change the `path_to_search` and `filename_contains` lines in the configuration file to point to the correct paths for your images. You can also change the `save_seg_dir` setting to change where the segmentations are saved.
 
 ### Generating segmentations
