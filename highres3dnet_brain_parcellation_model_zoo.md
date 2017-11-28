@@ -16,3 +16,10 @@ the network weights and examples data can be downloaded with the command
 ```bash
 python net_download.py highres3dnet_brain_parcellation_model_zoo
 ```
+
+## Generating segmentations for example data
+
+Generate segmentations for the included example image with the command 
+```bash
+net_segment inference -c ~/niftynet/extensions/highres3dnet_brain_parcellation/highres3dnet_config_eval.ini
+```
