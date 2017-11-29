@@ -13,7 +13,7 @@ to the online validation leaderboard of [BRATS challenge 2017](https://www.cbica
 
 ## Downloading model zoo files
 
-If you cloned the NiftyNet repository, 
+If you cloned the NiftyNet repository,
 the network weights and examples data can be downloaded with the command
 ```bash
 python net_download.py anisotropic_nets_brats_challenge_model_zoo
@@ -21,13 +21,31 @@ python net_download.py anisotropic_nets_brats_challenge_model_zoo
 
 ## Generating segmentations for example data
 
-Generate segmentations for the included example image with the command 
+Generate segmentations for the included example image with the command,
+
+For the network operates in axial view:
 ```bash
-net_segment inference -c ~/niftynet/extensions/anisotropic_nets_brats_challenge/whole_tumor_axial.ini
-net_segment inference -c ~/niftynet/extensions/anisotropic_nets_brats_challenge/whole_tumor_coronal.ini
-net_segment inference -c ~/niftynet/extensions/anisotropic_nets_brats_challenge/whole_tumor_sagittal.ini
+net_run inference -a anisotropic_nets_brats_challenge.brats_seg_app.BRATSApp \
+                  -c ~/niftynet/extensions/anisotropic_nets_brats_challenge/whole_tumor_axial.ini
+```
+For the network operates in coronal view:
+```bash
+net_run inference -a anisotropic_nets_brats_challenge.brats_seg_app.BRATSApp \
+                  -c ~/niftynet/extensions/anisotropic_nets_brats_challenge/whole_tumor_coronal.ini
+```
+For the network operates in sagittal view:
+```bash
+net_run inference -a anisotropic_nets_brats_challenge.brats_seg_app.BRATSApp \
+                  -c ~/niftynet/extensions/anisotropic_nets_brats_challenge/whole_tumor_sagittal.ini
 ```
 
-Replace `net_segment` with `python net_segment.py` if you cloned the NiftyNet repository. 
+Replace `net_run` with `python net_run.py` if you cloned the NiftyNet repository.
 
-Replace `~/niftynet/` if you specified a custom download path in the `net_download` command.
+## Generating averaged volume from the outcomes of the previous step
+
+A script has been created to compute the averaged volumes and
+ the Dice coefficients from the probabilistic outputs of the segmentation step.
+
+```bash
+python ~/niftynet/extensions/anisotropic_nets_brats_challenge/average_volume.py
+```
