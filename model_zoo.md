@@ -7,3 +7,4 @@ This page lists NiftyNet networks pre-trained for specific tasks. Information ab
 | [dense_vnet_abdominal_ct_model_zoo](./dense_vnet_abdominal_ct_model_zoo.md) | Segment multiple organs from abdominal CT |
 | [ultrasound_simulator_gan_model_zoo](./ultrasound_simulator_gan_model_zoo.md) | Generate simulated ultrasound images at specified poses |
 | [highres3dnet_brain_parcellation_model_zoo](./highres3dnet_brain_parcellation_model_zoo.md) | Brain parcellation from T1 MR images |
+| [anisotropic_nets_brats_challenge_model_zoo](./anisotropic_nets_brats_challenge_model_zoo.md) | Brain tumor segmentation with anisotropic nets |
