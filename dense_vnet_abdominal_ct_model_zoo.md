@@ -1,6 +1,6 @@
 # Automatic multi-organ segmentation on abdominal CT with dense v-networks
 
-This page describes how to acquire and use the network described in 
+This page describes how to acquire and use the network described in
 
 Eli Gibson, Francesco Giganti, Yipeng Hu, Ester Bonmati, Steve
 Bandula, Kurinchi Gurusamy, Brian Davidson, Stephen P. Pereira,
@@ -13,31 +13,34 @@ nearby organs (liver, gallbladder, spleen, left kidney).
 
 ## Downloading model zoo files
 
-If you cloned the NiftyNet repository, the network weights and examples data can be downloaded with the command
+The network weights and examples data can be downloaded with the command
 ```bash
-python net_download.py dense_vnet_abdominal_ct_model_zoo
+net_download dense_vnet_abdominal_ct_model_zoo
 ```
 
+(Replace `net_download` with `python net_download.py` if you cloned the NiftyNet repository.)
 
-Alternatively, you can download the 
-[model zoo entry](https://www.dropbox.com/s/yddopkblhe7gfsj/dense_vnet_abdominal_ct_model_zoo.tar.gz?dl=1) 
-and the [example data](https://www.dropbox.com/s/5fk0m9v12if5da9/dense_vnet_abdominal_ct_model_zoo_data.tar.gz?dl=1) manually. 
-Unzip `dense_vnet_abdominal_ct_model_zoo.tar.gz` into 
-`~/niftynet/models/dense_vnet_abdominal_ct_model_zoo/` and 
-`dense_vnet_abdominal_ct_model_zoo_data.tar.gz` into 
-`~/niftynet/data/dense_vnet_abdominal_ct_model_zoo_data/`.
 
-Make sure that the model directory (`~/niftynet/models/` by default) is on the `PYTHONPATH`.
+Alternatively, you can manually download:
+- [model zoo code](https://www.dropbox.com/s/ptu46os7lfmj0dl/dense_vnet_abdominal_ct_code_config.tar.gz?dl=1)
+- [trained network weights](https://www.dropbox.com/s/zvc8stqo6womvou/dense_vnet_abdominal_ct_weights.tar.gz?dl=1)
+- [example data](https://www.dropbox.com/s/5fk0m9v12if5da9/dense_vnet_abdominal_ct_model_zoo_data.tar.gz?dl=1)
+
+And unzip:
+- `dense_vnet_abdominal_ct_code_config.tar.gz.tar.gz` into `~/niftynet/extensions/dense_vnet_abdominal_ct/`
+- `dense_vnet_abdominal_ct_weights.tar.gz` into `~/niftynet/models/dense_vnet_abdominal_ct/`
+- `dense_vnet_abdominal_ct_model_zoo_data.tar.gz` into `~/niftynet/data/dense_vnet_abdominal_ct/`
+
+Make sure that the model directory (`~/niftynet/extensions/` by default) is on the `PYTHONPATH`.
 
 ## Generating segmentations for example data
 
-Generate segmentations for the included example image with the command 
+Generate segmentations for the included example image with the command
 ```bash
 net_segment inference -c ~/niftynet/extensions/dense_vnet_abdominal_ct/config.ini
 ```
-Replace `net_segment` with `python net_segment.py` if you cloned the NiftyNet repository. 
+Replace `net_segment` with `python net_segment.py` if you cloned the NiftyNet repository.
 
-Replace `~/niftynet/` if you specified a custom download path in the `net_download` command.
 
 ## Generating segmentations for your own data
 

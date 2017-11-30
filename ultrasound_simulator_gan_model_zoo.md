@@ -1,6 +1,6 @@
 # Freehand Ultrasound Image Simulation with Spatially-Conditioned Generative Adversarial Networks
 
-This page describes how to acquire and use the network described in 
+This page describes how to acquire and use the network described in
 
 Yipeng Hu, Eli Gibson, Li-Lin Lee, Weidi Xie, Dean C. Barratt, Tom Vercauteren, J. Alison Noble
 (2017). [Freehand Ultrasound Image Simulation with Spatially-Conditioned Generative Adversarial Networks](https://arxiv.org/abs/1707.05392), In MICCAI RAMBO 2017
@@ -9,27 +9,32 @@ Yipeng Hu, Eli Gibson, Li-Lin Lee, Weidi Xie, Dean C. Barratt, Tom Vercauteren, 
 
 If you cloned the NiftyNet repository, the network weights and examples data can be downloaded with the command
 ```bash
-python net_download.py ultrasound_simulator_gan_model_zoo
-``` 
+net_download ultrasound_simulator_gan_model_zoo
+```
+(Replace `net_download` with `python net_download.py` if you cloned the NiftyNet repository.)
 
-If you install NiftyNet via pip, you won't have the net_download feature yet. You can download the 
-[model zoo entry](https://www.dropbox.com/s/yddopkblhe7gfsj/dense_vnet_abdominal_ct_model_zoo.tar.gz?dl=1) 
-and the [example data](https://www.dropbox.com/s/5fk0m9v12if5da9/dense_vnet_abdominal_ct_model_zoo_data.tar.gz?dl=1) manually. 
-Unzip ultrasound_simulator_gan_model_zoo.tar.gz into ~/niftynet/models/ultrasound_simulator_gan_model_zoo/ and ultrasound_simulator_gan_model_zoo_data.tar.gz into 
-~/niftynet/data/ultrasound_simulator_gan_model_zoo_data/.
+Alternatively, you can manually download:
+- [model zoo entry](https://www.dropbox.com/s/089l4ixd2k7fiyy/ultrasound_simulator_gan_code.tar.gz?dl=1)
+- [example data](https://www.dropbox.com/s/hu1i8yjdptwq6wj/ultrasound_simulator_gan_model_zoo_data.tar.gz?dl=1)
+- [trained network weights](https://www.dropbox.com/s/95smm4i464nwczm/ultrasound_simulator_gan_weights.tar.gz?dl=1)
 
-Make sure that the model directory (`~/niftynet/models/` by default) is on the PYTHONPATH.
+and unzip:
+- `ultrasound_simulator_gan_code.tar.gz` into `~/niftynet/extensions/ultrasound_simulator_gan/`
+- `ultrasound_simulator_gan_model_zoo_data.tar.gz` into `~/niftynet/data/ultrasound_simulator_gan/`
+- `ultrasound_simulator_gan_weights.tar.gz` into `~/niftynet/models/ultrasound_simulator_gan/`
+
+Make sure that the model directory (`~/niftynet/extensions/` by default) is on the PYTHONPATH.
 
 This network generates ultrasound images conditioned by a coordinate map. Some example coordinate maps are included in the model zoo data. Additional examples are available [here](https://www.dropbox.com/s/w0frdlxaie3mndg/test_data.tar.gz?dl=0)).
 
 ## Generating segmentations for example data
 
-Generate segmentations for the included example conditioning data with the command 
+Generate segmentations for the included example conditioning data with the command
 ```bash
 net_gan inference -c ~/niftynet/extensions/ultrasound_simulator_gan/config.ini
 ```
 
-Replace `net_segment` with `python net_gan.py` if you cloned the NiftyNet repository. 
+Replace `net_segment` with `python net_gan.py` if you cloned the NiftyNet repository.
 
 Replace `~/niftynet/` if you specified a custom download path in the `net_download` command.
 
