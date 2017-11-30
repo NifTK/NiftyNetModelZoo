@@ -50,3 +50,21 @@ A script has been created to compute the averaged volumes and
 ```bash
 python ~/niftynet/extensions/anisotropic_nets_brats_challenge/average_volume.py
 ```
+
+---
+
+Example data used in this model zoo entry are taken from 
+[Multimodal Brain Tumor Segmentation Challenge 2017](http://braintumorsegmentation.org/).
+
+Data references:
+
+> Menze, Bjoern H., et al. 
+> "The multimodal brain tumor image segmentation benchmark (BRATS)." 
+> IEEE transactions on medical imaging 34.10 (2015): 1993-2024.
+> DOI: 10.1109/TMI.2014.2377694
+
+
+> Bakas, S., et al.
+> "Advancing The Cancer Genome Atlas glioma MRI collections with expert segmentation labels and radiomic features."
+> Nature Scientific Data 4:170117 (2017).
+> DOI: 10.1038/sdata.2017.117
