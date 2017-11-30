@@ -60,3 +60,12 @@ You may need to change the `path_to_search` and `filename_contains` lines in the
 Generate segmentations with the command `net_segment inference -c edited_config.ini`, replacing `edited_config.ini` with the path to the new configuration file. Segmentations will be saved in the path specified by the `save_seg_dir` setting with names corresponding to your input file names, with a `_niftynet_out.nii.gz` suffix.
 
 
+
+Please Note:
+
+* To achieve an efficient parcellation, a GPU with at least 10GB memory is required.
+
+* Please change the environment variable `CUDA_VISIBLE_DEVICES` to an appropriate value if necessary (e.g., `export CUDA_VISIBLE_DEVICES=0` will allow NiftyNet to use the `0`-th GPU).
+
+
+
