@@ -13,11 +13,12 @@ to the online validation leaderboard of [BRATS challenge 2017](https://www.cbica
 
 ## Downloading model zoo files
 
-If you cloned the NiftyNet repository,
-the network weights and examples data can be downloaded with the command
+The network weights and examples data can be downloaded with the command
 ```bash
-python net_download.py anisotropic_nets_brats_challenge_model_zoo
+net_download anisotropic_nets_brats_challenge_model_zoo
 ```
+
+(Replace `net_download` with `python net_download.py` if you cloned the NiftyNet repository.)
 
 ## Generating segmentations for example data
 
@@ -39,7 +40,7 @@ net_run inference -a anisotropic_nets_brats_challenge.brats_seg_app.BRATSApp \
                   -c ~/niftynet/extensions/anisotropic_nets_brats_challenge/whole_tumor_sagittal.ini
 ```
 
-Replace `net_run` with `python net_run.py` if you cloned the NiftyNet repository.
+(Replace `net_run` with `python net_run.py` if you cloned the NiftyNet repository.)
 
 ## Generating averaged volume from the outcomes of the previous step
 
