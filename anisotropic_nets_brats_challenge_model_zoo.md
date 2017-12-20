@@ -8,8 +8,11 @@ Cascaded Anisotropic Convolutional Neural Networks, MICCAI BRATS 2017
 
 [https://arxiv.org/abs/1709.00382](https://arxiv.org/abs/1709.00382)
 
-*[1] This implementation ranked the first (in terms of averaged Dice score 0.90499) according
+* This implementation ranked the first (in terms of averaged Dice score 0.90499) according
 to the online validation leaderboard of [BRATS challenge 2017](https://www.cbica.upenn.edu/BraTS17/lboardValidation.html).*
+
+* For a full implementation of the method described in this paper with three stages of the cascaded CNNs,
+please see: https://github.com/taigw/brats17
 
 ## Downloading model zoo files
 
@@ -53,13 +56,13 @@ python ~/niftynet/extensions/anisotropic_nets_brats_challenge/average_volume.py
 
 ---
 
-Example data used in this model zoo entry are taken from 
+Example data used in this model zoo entry are taken from
 [Multimodal Brain Tumor Segmentation Challenge 2017](http://braintumorsegmentation.org/).
 
 Data references:
 
-> Menze, Bjoern H., et al. 
-> "The multimodal brain tumor image segmentation benchmark (BRATS)." 
+> Menze, Bjoern H., et al.
+> "The multimodal brain tumor image segmentation benchmark (BRATS)."
 > IEEE transactions on medical imaging 34.10 (2015): 1993-2024.
 > DOI: 10.1109/TMI.2014.2377694
 
