@@ -14,8 +14,7 @@ net_download autocontext_mr_ct_model_zoo
 ## Initial training
 Command line parameters: ``--starting_iter 1 --max_iter 500``
 ```bash
-python net_run.py train \
-  -a niftynet.contrib.regression_weighted_sampler.isample_regression.ISampleRegression \
+python net_regress.py train \
   -c ~/niftynet/extensions/autocontext_mr_ct/net_autocontext.ini \
   --starting_iter 0 --max_iter 500
 ```
@@ -27,8 +26,7 @@ modify the inference batch size and window size for efficiency purpose.
 The contexts will be generated to
 ``~/niftynet/models/autocontext_mr_ct/autocontext_output``.
 ```bash
-python net_run.py inference \
-  -a niftynet.contrib.regression_weighted_sampler.isample_regression.ISampleRegression \
+python net_regress.py inference \
   -c ~/niftynet/extensions/autocontext_mr_ct/net_autocontext.ini \
   --inference_iter 500 --spatial_window_size 240,240,1 --batch_size 4 --dataset_split_file nofile
 ```
@@ -37,8 +35,7 @@ python net_run.py inference \
 Command line parameters ``--starting_iter -1``
 indicate training the model from the most recently saved checkpoint (at iteration 500).
 ```bash
-python net_run.py train \
-  -a niftynet.contrib.regression_weighted_sampler.isample_regression.ISampleRegression \
+python net_regress.py train \
   -c ~/niftynet/extensions/autocontext_mr_ct/net_autocontext.ini \
   --starting_iter -1 --max_iter 1000
 ```
@@ -49,19 +46,16 @@ Alternating in between context generation and training:
 (from git cloned source code)
 ```bash
 python net_download.py autocontext_mr_ct_model_zoo
-python net_run.py train \
-  -a niftynet.contrib.regression_weighted_sampler.isample_regression.ISampleRegression \
+python net_regress.py train \
   -c ~/niftynet/extensions/autocontext_mr_ct/net_autocontext.ini \
   --starting_iter 0 --max_iter 500
 for max_iter in `seq 1000 1000 5000`
 do
-  python net_run.py inference \
-    -a niftynet.contrib.regression_weighted_sampler.isample_regression.ISampleRegression \
+  python net_regress.py inference \
     -c ~/niftynet/extensions/autocontext_mr_ct/net_autocontext.ini \
     --inference_iter -1 --spatial_window_size 240,240,1 --batch_size 4 --dataset_split_file nofile
 
-  python net_run.py train \
-    -a niftynet.contrib.regression_weighted_sampler.isample_regression.ISampleRegression \
+  python net_regress.py train \
     -c ~/niftynet/extensions/autocontext_mr_ct/net_autocontext.ini \
     --starting_iter -1 --max_iter $max_iter
 done
