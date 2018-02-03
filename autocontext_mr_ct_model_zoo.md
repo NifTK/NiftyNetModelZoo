@@ -49,7 +49,7 @@ python net_download.py autocontext_mr_ct_model_zoo
 python net_regress.py train \
   -c ~/niftynet/extensions/autocontext_mr_ct/net_autocontext.ini \
   --starting_iter 0 --max_iter 500
-for max_iter in `seq 1000 1000 5000`
+for max_iter in `seq 1000 1000 10000`
 do
   python net_regress.py inference \
     -c ~/niftynet/extensions/autocontext_mr_ct/net_autocontext.ini \
@@ -60,7 +60,7 @@ do
     --starting_iter -1 --max_iter $max_iter
 done
 ```
-This script runs training for 5000 iterations,
+This script runs training for 10000 iterations,
 and new training contexts are generated at every 1000 iterations.
 
 To see the training/validation curves using tensorboard:
