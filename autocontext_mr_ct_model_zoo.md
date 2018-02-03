@@ -24,6 +24,7 @@ python net_run.py train \
 ## Generating contexts
 Command line parameters: ``--spatial_window_size 240,240,1 --batch_size 4``
 modify the inference batch size and window size for efficiency purpose.
+The contexts will be generated to
 ``~/niftynet/models/autocontext_mr_ct/autocontext_output``.
 ```bash
 python net_run.py inference \
@@ -32,7 +33,7 @@ python net_run.py inference \
   --inference_iter 500 --spatial_window_size 240,240,1 --batch_size 4 --dataset_split_file nofile
 ```
 
-## Continue training by sampling according to the error maps:
+## Continue training with the latest contexts:
 Command line parameters ``--starting_iter -1``
 indicate training the model from the most recently saved checkpoint (at iteration 500).
 ```bash
@@ -44,7 +45,7 @@ python net_run.py train \
 
 
 ## Combine them together
-Alternating in between error map generation and training with new sampling weights:
+Alternating in between context generation and training:
 (from git cloned source code)
 ```bash
 python net_download.py autocontext_mr_ct_model_zoo
