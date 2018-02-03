@@ -99,4 +99,4 @@ python net_run.py inference \
   --inference_iter -1 --spatial_window_size 240,240,1 --batch_size 4 --error_map False --dataset_split_file nofile
 ```
 
-The output can be found at ``~/niftynet/models/isampler_output/``.
+The output can be found at ``~/niftynet/models/mr_ct_regression/isampler_output/``.
