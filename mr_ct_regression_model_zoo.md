@@ -19,12 +19,12 @@ net_download mr_ct_regression_model_zoo
 
 
 ## Initial training
-Command line parameters: ``--starting_iter 0 --max_iter 100``
+Command line parameters: ``--starting_iter 0 --max_iter 1000``
 ```bash
 python net_run.py train \
   -a niftynet.contrib.regression_weighted_sampler.isample_regression.ISampleRegression \
   -c ~/niftynet/extensions/mr_ct_regression/net_isampler.ini \
-  --starting_iter 0 --max_iter 100
+  --starting_iter 0 --max_iter 1000
 ```
 
 ## Generating error maps
@@ -37,17 +37,17 @@ the errors (elementwise squared differences) will be generated to
 python net_run.py inference \
   -a niftynet.contrib.regression_weighted_sampler.isample_regression.ISampleRegression \
   -c ~/niftynet/extensions/mr_ct_regression/net_isampler.ini \
-  --inference_iter 100 --spatial_window_size 240,240,1 --batch_size 4 --error_map True
+  --inference_iter 1000 --spatial_window_size 240,240,1 --batch_size 4 --error_map True
 ```
 
 ## Continue training by sampling according to the error maps:
 Command line parameters ``--starting_iter -1``
-indicate training the model from the most recently saved checkpoint (at iteration 100).
+indicate training the model from the most recently saved checkpoint (at iteration 1000).
 ```bash
 python net_run.py train \
   -a niftynet.contrib.regression_weighted_sampler.isample_regression.ISampleRegression \
   -c ~/niftynet/extensions/mr_ct_regression/net_isampler.ini \
-  --starting_iter -1 --max_iter 200
+  --starting_iter -1 --max_iter 1500
 ```
 
 ## Combine them together
@@ -58,8 +58,8 @@ python net_download.py mr_ct_regression_model_zoo
 python net_run.py train \
   -a niftynet.contrib.regression_weighted_sampler.isample_regression.ISampleRegression \
   -c ~/niftynet/extensions/mr_ct_regression/net_isampler.ini \
-  --starting_iter 0 --max_iter 100
-for max_iter in `seq 200 100 5000`
+  --starting_iter 0 --max_iter 1000
+for max_iter in `seq 1500 500 10000`
 do
   python net_run.py inference \
     -a niftynet.contrib.regression_weighted_sampler.isample_regression.ISampleRegression \
@@ -72,8 +72,8 @@ do
     --starting_iter -1 --max_iter $max_iter
 done
 ```
-This script runs training for 5000 iterations,
-and new sampling weights are generated at every 100 iterations.
+This script runs training for 10000 iterations,
+and new sampling weights are generated at every 500 iterations.
 
 To see the training/validation curves using tensorboard:
 ```bash
