@@ -35,7 +35,7 @@ python net_run.py inference \
     -c ~/niftynet/extensions/isampler_autocontext_mr_ct/net_hybrid.ini \                                                                                                                                                                          
     --inference_iter 500 --spatial_window_size 240,240,1 --batch_size 4 \                                                                                                                                                                         
     --dataset_split_file nofile --error_map False 
-for max_iter in `seq 1000 1000 9000`                                                                                                                                                                                                              
+for max_iter in `seq 1000 1000 10000`                                                                                                                                                                                                              
 do                                                                                                                                                                                                                                                
     python net_run.py inference \                                                                                                                                                                                                                 
         -a niftynet.contrib.regression_weighted_sampler.isample_regression.ISampleRegression \                                                                                                                                                    
@@ -43,10 +43,4 @@ do
         --inference_iter $max_iter --spatial_window_size 240,240,1 --batch_size 4 \                                                                                                                                                               
         --dataset_split_file nofile --error_map False                                                                                                                                                                                             
 done
-
-python net_run.py inference \                                                                                                                                                                                                                     
-    -a niftynet.contrib.regression_weighted_sampler.isample_regression.ISampleRegression \                                                                                                                                                        
-    -c ~/niftynet/extensions/isampler_autocontext_mr_ct/net_hybrid.ini \                                                                                                                                                                          
-    --inference_iter 10000 --spatial_window_size 240,240,1 --batch_size 4 \                                                                                                                                                                       
-    --dataset_split_file nofile --error_map False   
 ```
