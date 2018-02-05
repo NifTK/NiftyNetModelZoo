@@ -70,3 +70,26 @@ tensorboard --logdir ~/niftynet/models/autocontext_mr_ct/logs
 
 ## Generating regression output
 Finally regression maps could be found at ``~/niftynet/models/autocontext_mr_ct/autocontext_output/``.
+
+To make inferences using the sequence of trained models:
+```bash
+# reset the initial estimation folder:
+net_download autocontext_mr_ct_model_zoo -r 
+python net_regress.py inference \                                                                                                                                                                                                                 
+    -c ~/niftynet/extensions/autocontext_mr_ct/net_autocontext.ini \                                                                                                                                                                              
+    --inference_iter 500 --spatial_window_size 240,240,1 --batch_size 4 \                                                                                                                                                                         
+    --dataset_split_file nofile                                                                                                                                                                                                                   
+                                                                                                                                                                                                                                                  
+for max_iter in `seq 1000 1000 9000`                                                                                                                                                                                                              
+do                                                                                                                                                                                                                                                
+    python net_regress.py inference \                                                                                                                                                                                                             
+        -c ~/niftynet/extensions/autocontext_mr_ct/net_autocontext.ini \                                                                                                                                                                          
+        --inference_iter $max_iter --spatial_window_size 240,240,1 --batch_size 4 \                                                                                                                                                               
+        --dataset_split_file nofile                                                                                                                                                                                                               
+done                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                  
+python net_regress.py inference \                                                                                                                                                                                                                 
+    -c ~/niftynet/extensions/autocontext_mr_ct/net_autocontext.ini \                                                                                                                                                                              
+    --inference_iter 10000 --spatial_window_size 240,240,1 --batch_size 4 \                                                                                                                                                                        
+    --dataset_split_file nofile   
+```
