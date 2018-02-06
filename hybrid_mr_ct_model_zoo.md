@@ -9,13 +9,13 @@ do
     python net_run.py inference \
         -a niftynet.contrib.regression_weighted_sampler.isample_regression.ISampleRegression \
         -c ~/niftynet/extensions/isampler_autocontext_mr_ct/net_hybrid.ini \
-        --inference_iter -1 --spatial_window_size 240,240,1 --batch_size 4 --dataset_split_file nofile
-
+        --inference_iter -1 --spatial_window_size 240,240,1 --batch_size 4 \
+        --dataset_split_file nofile  --error_map True
+        
     python net_run.py inference \
         -a niftynet.contrib.regression_weighted_sampler.isample_regression.ISampleRegression \
         -c ~/niftynet/extensions/isampler_autocontext_mr_ct/net_hybrid.ini \
-        --inference_iter -1 --spatial_window_size 240,240,1 --batch_size 4 \
-        --dataset_split_file nofile  --error_map True
+        --inference_iter -1 --spatial_window_size 240,240,1 --batch_size 4 --dataset_split_file nofile
 
     python net_run.py train \
         -a niftynet.contrib.regression_weighted_sampler.isample_regression.ISampleRegression \
