@@ -5,7 +5,7 @@ This page describes how to acquire and use the network described in
 Eli Gibson, Francesco Giganti, Yipeng Hu, Ester Bonmati, Steve
 Bandula, Kurinchi Gurusamy, Brian Davidson, Stephen P. Pereira,
 Matthew J. Clarkson and Dean C. Barratt (2017), Automatic multi-organ
-segmentation on abdominal CT with dense v-networks (submitted to IEEE TMI)
+segmentation on abdominal CT with dense v-networks https://doi.org/10.1109/TMI.2018.2806309
 
 This network segments eight organs on abdominal CT, comprising the
 gastointestinal tract (esophagus, stomach, duodenum), the pancreas, and
