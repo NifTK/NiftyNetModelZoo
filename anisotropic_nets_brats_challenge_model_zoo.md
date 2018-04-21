@@ -23,6 +23,22 @@ net_download anisotropic_nets_brats_challenge_model_zoo
 
 (Replace `net_download` with `python net_download.py` if you cloned the NiftyNet repository.)
 
+After running this command successfully, the downloaded files include:
+
+  * `brats_seg_app.py` --
+    an application built with NiftyNet, defines the main workflow of network
+    training and inference.
+  * `wt_net.py` --
+    the network definitions.
+  * `.ini` files --
+    configuration files define system parameters for running
+    segmentation networks, the three files correspond to the networks in three orientations
+    [axial, coronal, sagittal] configurations.
+  * `label_mapping_whole_tumor.txt` --
+    mapping file used by NiftyNet, to convert the multi-class segmentations
+    into a binary problem.
+
+
 ## Generating segmentations for example data
 
 Generate segmentations for the included example image with the command,
@@ -54,6 +70,10 @@ A script has been created to compute the averaged volumes and
 python ~/niftynet/extensions/anisotropic_nets_brats_challenge/average_volume.py
 ```
 
+A script [`rename_crop_BRATS.py`](https://github.com/NifTK/NiftyNet/blob/dev/demos/BRATS17/rename_crop_BRATS.py) is also available to to rename BRATS17 images into
+`TYPEindex_modality.nii.gz` format and crop with a bounding box to remove
+image background (voxels with intensity value zero).
+    
 ---
 
 Example data used in this model zoo entry are taken from
