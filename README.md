@@ -1,4 +1,21 @@
-Please see the [Model zoo entries](./model_zoo.md)
-and [NiftyNet project page](https://cmiclab.cs.ucl.ac.uk/CMIC/NiftyNet).
+# NiftyNet model zoo
 
-NiftyNetExampleServer is part of an automatic download system. You don't need to clone this project.
+This repository hosts NiftyNet networks pre-trained for specific tasks.
+
+Information about downloading and using each network are available by clicking on the name.
+
+| Name | Description |
+|  --- | ---         |
+| [dense_vnet_abdominal_ct_model_zoo](./dense_vnet_abdominal_ct_model_zoo.md) | Segment multiple organs from abdominal CT |
+| [ultrasound_simulator_gan_model_zoo](./ultrasound_simulator_gan_model_zoo.md) | Generate simulated ultrasound images at specified poses |
+| [highres3dnet_brain_parcellation_model_zoo](./highres3dnet_brain_parcellation_model_zoo.md) | Brain parcellation from T1 MR images |
+| [anisotropic_nets_brats_challenge_model_zoo](./anisotropic_nets_brats_challenge_model_zoo.md) | Brain tumor segmentation with anisotropic nets |
+| [mr_ct_regression_model_zoo](./mr_ct_regression_model_zoo.md) | Estimating CT from MR using an adaptive sampling strategy |
+| [autocontext_mr_ct_model_zoo](./autocontext_mr_ct_model_zoo.md) | Estimating CT from MR using an autocontext model |
+
+
+*See also the [NiftyNet project page](https://github.com/NifTK/NiftyNet).*
+
+*NiftyNetModelZoo is part of an automatic download system. You don't need to clone this project.*
+
+*Please report relevant issues/feature requests to [the main repository](https://github.com/NifTK/NiftyNet/issues/new/choose).*
