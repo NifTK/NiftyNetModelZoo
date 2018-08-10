@@ -1,0 +1,8 @@
+---
+config:
+  version: 1.0
+network_inference_config:
+  local_id: highres3dnet_brain_parcellation
+  url: https://www.dropbox.com/s/r2q08q1kkd534p4/highres3dnet_brain_parcellation_config.tar.gz?dl=1
+  action: expand
+  destination: extensions

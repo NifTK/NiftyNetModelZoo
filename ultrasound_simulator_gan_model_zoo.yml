@@ -1,0 +1,18 @@
+---
+config:
+  version: 1.0
+data:
+  local_id: ultrasound_simulator_gan
+  url: https://www.dropbox.com/s/hu1i8yjdptwq6wj/ultrasound_simulator_gan_model_zoo_data.tar.gz?dl=1
+  action: expand
+  destination: data
+weights:
+  local_id: ultrasound_simulator_gan
+  url: https://www.dropbox.com/s/95smm4i464nwczm/ultrasound_simulator_gan_weights.tar.gz?dl=1
+  action: expand
+  destination: models
+code:
+  local_id: ultrasound_simulator_gan
+  url: https://www.dropbox.com/s/089l4ixd2k7fiyy/ultrasound_simulator_gan_code.tar.gz?dl=1
+  action: expand
+  destination: extensions

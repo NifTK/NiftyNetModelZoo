@@ -1,0 +1,8 @@
+---
+config:
+  version: 1.0
+network_inference_config:
+  local_id: anisotropic_nets_brats_challenge
+  url: https://www.dropbox.com/s/il6uo6bwznuxd6k/anisotropic_nets_brats_challenge_code_config.tar.gz?dl=1
+  action: expand
+  destination: extensions

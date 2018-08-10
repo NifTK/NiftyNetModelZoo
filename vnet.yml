@@ -1,0 +1,7 @@
+---
+config:
+  version: 1.0
+download:
+  url: http://cmic.cs.ucl.ac.uk/platform/niftynetexamples/vnet.tar.gz
+  action: expand
+  destination: examples

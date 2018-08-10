@@ -1,0 +1,7 @@
+---
+config:
+  version: 1.0
+data:
+  url: http://cmic.cs.ucl.ac.uk/platform/niftynetexamples/OASIS.tar.gz?dl=1
+  action: expand
+  destination: data
