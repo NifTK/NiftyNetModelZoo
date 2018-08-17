@@ -1,0 +1,8 @@
+---
+config:
+  version: 1.0
+weights:
+  local_id: ultrasound_simulator_gan
+  url: https://www.dropbox.com/s/95smm4i464nwczm/ultrasound_simulator_gan_weights.tar.gz?dl=1
+  action: expand
+  destination: models

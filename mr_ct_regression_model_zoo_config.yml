@@ -1,0 +1,8 @@
+---
+config:
+  version: 1.0
+code:
+  local_id: mr_ct_regression
+  url: https://www.dropbox.com/s/ll2kr19suwlof6g/mr_ct_regression_model_zoo_config.tar.gz?dl=1
+  action: expand
+  destination: extensions
