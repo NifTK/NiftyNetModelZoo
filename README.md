@@ -6,12 +6,12 @@ Information about downloading and using each network are available by clicking o
 
 | Name | Description |
 |  --- | ---         |
-| [dense_vnet_abdominal_ct_model_zoo](./dense_vnet_abdominal_ct_model_zoo.md) | Segment multiple organs from abdominal CT |
-| [ultrasound_simulator_gan_model_zoo](./ultrasound_simulator_gan_model_zoo.md) | Generate simulated ultrasound images at specified poses |
-| [highres3dnet_brain_parcellation_model_zoo](./highres3dnet_brain_parcellation_model_zoo.md) | Brain parcellation from T1 MR images |
-| [anisotropic_nets_brats_challenge_model_zoo](./anisotropic_nets_brats_challenge_model_zoo.md) | Brain tumor segmentation with anisotropic nets |
-| [mr_ct_regression_model_zoo](./mr_ct_regression_model_zoo.md) | Estimating CT from MR using an adaptive sampling strategy |
-| [autocontext_mr_ct_model_zoo](./autocontext_mr_ct_model_zoo.md) | Estimating CT from MR using an autocontext model |
+| [dense_vnet_abdominal_ct_model_zoo](./dense_vnet_abdominal_ct_model_zoo) | Segment multiple organs from abdominal CT |
+| [ultrasound_simulator_gan_model_zoo](./ultrasound_simulator_gan_model_zoo) | Generate simulated ultrasound images at specified poses |
+| [highres3dnet_brain_parcellation_model_zoo](./highres3dnet_brain_parcellation_model_zoo) | Brain parcellation from T1 MR images |
+| [anisotropic_nets_brats_challenge_model_zoo](./anisotropic_nets_brats_challenge_model_zoo) | Brain tumor segmentation with anisotropic nets |
+| [mr_ct_regression_model_zoo](./mr_ct_regression_model_zoo) | Estimating CT from MR using an adaptive sampling strategy |
+| [autocontext_mr_ct_model_zoo](./autocontext_mr_ct_model_zoo) | Estimating CT from MR using an autocontext model |
 
 
 *See also the [NiftyNet project page](https://github.com/NifTK/NiftyNet).*
