@@ -91,3 +91,9 @@ Data references:
 > "Advancing The Cancer Genome Atlas glioma MRI collections with expert segmentation labels and radiomic features."
 > Nature Scientific Data 4:170117 (2017).
 > DOI: 10.1038/sdata.2017.117
+
+
+<img src="https://github.com/NifTK/NiftyNetModelZoo/raw/5-reorganising-with-lfs/by.png" width="40" height="14">
+
+This model zoo entry is licensed under a
+[Creative Commons Attribution 4.0 International (CC BY) License](https://creativecommons.org/licenses/by/4.0/).
