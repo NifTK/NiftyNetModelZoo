@@ -19,3 +19,9 @@ Information about downloading and using each network are available by clicking o
 *NiftyNetModelZoo is part of an automatic download system. You don't need to clone this project.*
 
 *Please report relevant issues/feature requests to [the main repository](https://github.com/NifTK/NiftyNet/issues/new/choose).*
+
+---
+The model zoo entries are licensed under a
+[Creative Commons Attribution 4.0 International (CC BY) License](https://creativecommons.org/licenses/by/4.0/).
+
+<img src="https://github.com/NifTK/NiftyNetModelZoo/raw/5-reorganising-with-lfs/by.png" width="100" height="35">

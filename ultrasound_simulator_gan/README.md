@@ -50,3 +50,8 @@ You may need to change the `path_to_search` and `filename_contains` lines in the
 Generate samples from the simulator with the command `net_gan.py inference -c edited_config.ini`, replacing `edited_config.ini` with the path to the new configuration file. Sets of simulated US images interpolated between two samples will be generated in the path specified by the `save_seg_dir` setting with names of the form `k_id_niftynet_generated.nii.gz`, where `k` is the interpolation index 0-9 and `id` is the frame code from the input conditioning data filename.
 
 
+---
+This model zoo entry is licensed under a
+[Creative Commons Attribution 4.0 International (CC BY) License](https://creativecommons.org/licenses/by/4.0/).
+
+<img src="https://github.com/NifTK/NiftyNetModelZoo/raw/5-reorganising-with-lfs/by.png" width="100" height="35">

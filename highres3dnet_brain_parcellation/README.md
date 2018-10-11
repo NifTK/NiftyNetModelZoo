@@ -26,3 +26,10 @@ net_segment inference -c ~/niftynet/extensions/highres3dnet_brain_parcellation/h
 ```
 
 Replace `net_segment` with `python net_segment.py` if you cloned the NiftyNet repository.
+
+
+---
+This model zoo entry is licensed under a
+[Creative Commons Attribution 4.0 International (CC BY) License](https://creativecommons.org/licenses/by/4.0/).
+
+<img src="https://github.com/NifTK/NiftyNetModelZoo/raw/5-reorganising-with-lfs/by.png" width="100" height="35">
