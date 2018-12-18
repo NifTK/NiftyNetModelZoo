@@ -63,9 +63,8 @@ The resulting segmentation is then outputted to `~/niftynet/models/unet_histolog
 
 ## Application to Other Data
 
-The trained network can be applied to other data by placing it inside the folder `~/niftynet/data/unet_histology`. The file should have a prefix `input_` followed by an identifier, e.g., `my_file`, so that the file base name becomes `input_my_file.EXT`, where EXT is the appropriate file name extension. To make the application see the new file, also an entry has to be added to `~/niftynet/models/unet_histology/dataset_split.csv` containing the following line for the example identifier `my_file`:
-```inference,my_file```
+The trained network can be applied to other data by placing it inside the folder `~/niftynet/data/unet_histology`. The file should have a prefix `input_` followed by an identifier, e.g., `my_file`, so that the file base name becomes `input_my_file.EXT`, where EXT is the appropriate file name extension.
 
 How data-set definition and splitting is done in general is described in the following README: https://niftynet.readthedocs.io/en/dev/config_spec.html
 
-The application accepts 2D RGB files that are at least 400x400 pixels in size, in any format supported by scikit-image, SimpleITK, nibabel, or OpenCV, which should cover the vast majority of commonly used picture file formats. In the included demonstration, a Windows BMP file was used for the input.
+The application accepts 2D RGB files that are at least `400x400` pixels in size, in any format supported by scikit-image, SimpleITK, nibabel, or OpenCV, which should cover the vast majority of commonly used picture file formats. In the included demonstration, a Windows BMP file was used for the input.
