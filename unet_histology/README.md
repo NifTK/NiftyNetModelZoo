@@ -1,4 +1,4 @@
-# Gland Segmentation By Means of 2D U-Net
+# Gland Segmentation with U-Net
 
 This example shows how to apply NiftyNet's 2D U-Net implementation to the
 segmentation of glands in colon histology images, which has clinical
