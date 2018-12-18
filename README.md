@@ -12,6 +12,7 @@ Information about downloading and using each network are available by clicking o
 | [anisotropic_nets_brats_challenge_model_zoo](./anisotropic_nets_brats_challenge) | Brain tumor segmentation with anisotropic nets |
 | [mr_ct_regression_model_zoo](./mr_ct_regression) | Estimating CT from MR using an adaptive sampling strategy |
 | [autocontext_mr_ct_model_zoo](./autocontext_mr_ct) | Estimating CT from MR using an autocontext model |
+| [unet_histology_model_zoo](./unet_histology) | Binary segmenttation of glands from colon histology images |
 
 
 *See also the [NiftyNet project page](https://github.com/NifTK/NiftyNet).*
