@@ -1,3 +1,7 @@
+# Status update - 2020-04-21
+
+⚠️ **[NiftyNet](https://github.com/NifTK/NiftyNet) and this associated model zoo are not actively maintained anymore**. We have learned a lot in our journey and decided to redirect most of the development efforts towards [MONAI](https://github.com/Project-MONAI/MONAI/).
+
 # NiftyNet model zoo
 
 This repository hosts NiftyNet networks pre-trained for specific tasks.
